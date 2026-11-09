@@ -82,10 +82,10 @@ html.sva-scrolled .top-blocks--sticky .block-header .background{opacity:0}
 #hero-section>.block-background::before,#hero-section>.block-background::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform;z-index:0}
 #hero-section>.block-background::before{width:46vw;height:46vw;left:-8vw;top:-4vw;opacity:.6;background:radial-gradient(circle,rgba(var(--sva-gold-lt),.8),rgba(var(--sva-gold-lt),0) 70%);animation:svaDrift1 22s ease-in-out infinite alternate}
 #hero-section>.block-background::after{width:52vw;height:40vw;right:-10vw;top:-8vw;opacity:.7;background:radial-gradient(circle at 35% 40%,rgba(var(--sva-cream),1),rgba(var(--sva-cream),0) 60%),radial-gradient(circle at 70% 75%,rgba(var(--sva-gold),.3),rgba(var(--sva-gold),0) 45%);animation:svaDrift2 26s ease-in-out infinite alternate}
-#hero-section::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(rgba(var(--sva-brown),.13) 1px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 0%,transparent 75%)}
-#hero-section::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .8s ease;background:radial-gradient(420px circle at var(--sva-mx,50%) var(--sva-my,40%),rgba(var(--sva-gold-lt),.3),transparent 60%)}
+#hero-section::before{content:"";position:absolute;inset:0;z-index:14;pointer-events:none;background-image:radial-gradient(rgba(var(--sva-brown),.13) 1px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 0%,transparent 75%)}
+#hero-section::after{content:"";position:absolute;inset:0;z-index:14;pointer-events:none;opacity:0;transition:opacity .8s ease;background:radial-gradient(420px circle at var(--sva-mx,50%) var(--sva-my,40%),rgba(var(--sva-gold-lt),.3),transparent 60%)}
 #hero-section:hover::after{opacity:1}
-#hero-section>.block-layout{position:relative;z-index:1}
+#hero-section>.block-layout{z-index:15}
 @keyframes svaDrift1{to{transform:translate3d(12vw,8vw,0) scale(1.15)}}
 @keyframes svaDrift2{to{transform:translate3d(-12vw,8vw,0) scale(.9)}}
 
