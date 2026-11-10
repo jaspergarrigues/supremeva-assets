@@ -43,6 +43,7 @@ html.lenis,html.lenis body{height:auto}
  .transition.transition--slide-right:not(.transition--root-hidden){transform:translate3d(56px,0,0)}
  .transition.transition--scale:not(.transition--root-hidden){transform:scale(.92)}
  .transition:not(.transition--root-hidden)[data-animation-state=active],
+ .transition.sva-in,
  .sva-reveal.sva-in{
   opacity:1!important;transform:none!important;filter:none!important;
   transition-delay:var(--sva-delay,var(--user-animation-delay,0s))!important}
