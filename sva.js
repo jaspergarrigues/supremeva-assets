@@ -104,6 +104,11 @@ new MutationObserver(function(){if(!document.documentElement.classList.contains(
   }
   document.querySelectorAll('section.block:not(#hero-section) h2:not(.sva-h2)').forEach(function(h){
    h.classList.add('sva-h2');var al=getComputedStyle(h).textAlign;if(al==='left'||al==='start')h.classList.add('sva-left');io.observe(h)});
+  if(!hero){var fs=document.querySelector('main section.block');if(fs)fs.classList.add('sva-sub-hero');
+   document.querySelectorAll('main section.block h1').forEach(function(h){
+    if(/173,\s*121,\s*0/.test(h.getAttribute('style')||'')&&!h.classList.contains('sva-gold-text'))h.classList.add('sva-gold-text');
+    h.querySelectorAll('span[style*="173, 121, 0"]').forEach(function(s){s.classList.add('sva-gold-text')});
+    if(!h.classList.contains('sva-h2')){h.classList.add('sva-h2');var al=getComputedStyle(h).textAlign;if(al==='left'||al==='start')h.classList.add('sva-left');io.observe(h)}})}
   if(fine)document.querySelectorAll('.layout-element__component--GridCard').forEach(function(c){
    if(c.__sva)return;c.__sva=1;c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--cx',(e.clientX-r.left)+'px');c.style.setProperty('--cy',(e.clientY-r.top)+'px')},{passive:true})});
   if(!document.getElementById('sva-grain')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var g=document.createElement('div');g.id='sva-grain';document.body.appendChild(g)}
