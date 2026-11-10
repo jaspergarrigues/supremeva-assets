@@ -2,10 +2,10 @@
 //# sourceMappingURL=lenis.min.js.map
 
 /* Supreme VA site scripts (Hark) */
-/* dark theme gate: ?theme=dark turns on (remembered), ?theme=light turns off */
+/* dark theme gate: dark by default; ?theme=light (remembered) opts out, ?theme=dark back on */
 (function(){try{var q=new URLSearchParams(location.search).get('theme'),k='sva-theme';
 if(q==='dark'||q==='light')localStorage.setItem(k,q);
-var on=(localStorage.getItem(k)||window.SVA_DEFAULT_THEME||'light')==='dark';if(!on)return;
+var on=(localStorage.getItem(k)||window.SVA_DEFAULT_THEME||'dark')==='dark';if(!on)return;
 var cs=document.currentScript,base=cs&&cs.src?cs.src.replace(/sva\.js(\?.*)?$/,''):'https://cdn.jsdelivr.net/gh/jaspergarrigues/supremeva-assets@main/';
 if(!document.getElementById('sva-dark-css')){var l=document.createElement('link');l.rel='stylesheet';l.id='sva-dark-css';l.href=base+'sva-dark.css';document.head.appendChild(l)}
 document.documentElement.classList.add('sva-dark');
