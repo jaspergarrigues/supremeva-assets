@@ -156,3 +156,5 @@ html.sva-dark #sva-ambient .b1{opacity:.22;background:radial-gradient(circle,rgb
 html.sva-dark #sva-ambient .b2{opacity:.18;background:radial-gradient(circle at 40% 40%,rgba(241,213,143,.35),rgba(241,213,143,0) 60%),radial-gradient(circle at 70% 75%,rgba(173,121,0,.35),rgba(173,121,0,0) 45%)}
 html.sva-dark #sva-ambient .dots{background-image:radial-gradient(rgba(241,213,143,.09) 1px,transparent 1.2px)}
 html.sva-dark #sva-ambient .spot{background:radial-gradient(460px circle at var(--sva-gx,50%) var(--sva-gy,40%),rgba(212,166,74,.16),transparent 60%)}
+
+html.sva-dark #sva-spot{mix-blend-mode:screen;background:radial-gradient(480px circle at var(--sva-gx,50%) var(--sva-gy,40%),rgba(212,166,74,.13),transparent 60%)}
