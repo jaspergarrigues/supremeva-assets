@@ -135,3 +135,15 @@ html.sva-dark main .text-box [style*="#563c00"],html.sva-dark main .text-box [st
 /* footer form labels/inputs marked --light */
 html.sva-dark :is(.input__label--light,.input__component--light){color:#cfc8b8!important}
 html.sva-dark .input__component--light{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.2)!important;color:#f3efe6!important}
+
+/* dark fixes v3 */
+html.sva-dark input::placeholder,html.sva-dark textarea::placeholder{color:rgba(240,230,209,.5)!important;opacity:1!important}
+html.sva-dark input,html.sva-dark textarea,html.sva-dark select{border-color:rgba(212,166,74,.35)!important}
+html.sva-dark .pagination,html.sva-dark .pagination *{color:rgba(240,230,209,.8)!important;fill:currentColor}
+html.sva-dark .pagination__button:hover{color:#fbe7b0!important}
+html.sva-dark .pagination__button--active,html.sva-dark .pagination__button[aria-current],html.sva-dark .pagination__button.active,html.sva-dark .pagination [class*=current],html.sva-dark .pagination [class*=active]{color:#d4a64a!important;font-weight:700}
+html.sva-dark .social-icons__link{color:#d4a64a!important;opacity:1!important;visibility:visible!important}
+html.sva-dark .social-icons__link svg{color:#d4a64a!important;opacity:1!important}
+html.sva-dark .social-icons__link svg [fill]:not([fill=none]){fill:#d4a64a!important}
+html.sva-dark .social-icons__link svg [stroke]:not([stroke=none]){stroke:#d4a64a!important}
+html.sva-dark .sva-sub-hero::before{background-image:radial-gradient(rgba(212,166,74,.10) 1px,transparent 1.2px)}
