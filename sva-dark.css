@@ -96,3 +96,42 @@ html.sva-dark .layout-element__component--GridSocialIcons{--icon-color:var(--sd-
 html.sva-dark ::selection{background:rgba(212,166,74,.35);color:#fff}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
  html.sva-dark .grid-card{background:rgba(28,28,32,.92)!important}}
+
+/* v2 fixes */
+/* header: kill the builder's white backing layer, crisp nav + logo */
+html.sva-dark .block-header .background,html.sva-dark .block-header>.background{background:transparent!important;opacity:0!important}
+html.sva-dark .block-header :is(.block-header-item__label,.block-header-item__item,.block-header-item a){color:#f3efe6!important;opacity:1!important}
+html.sva-dark .block-header-logo__image{filter:invert(1) hue-rotate(180deg) brightness(1.15) contrast(1.1)!important;opacity:1!important}
+html.sva-dark .block-header__social-icons{--icon-color:#d4a64a!important;color:#d4a64a!important}
+html.sva-dark .block-header__social-icons svg{fill:#d4a64a!important;color:#d4a64a!important}
+html.sva-dark .block-header__button .grid-button,html.sva-dark .block-header__button a{color:#141006!important;background:linear-gradient(180deg,#f1d58f,#c9973a)!important;border-color:transparent!important}
+html.sva-dark .block-header__button .grid-button *{color:#141006!important}
+
+/* background images (halftone bands) go dark instead of cream */
+html.sva-dark .block-background__image{opacity:.10!important;filter:invert(1) sepia(1) saturate(2) hue-rotate(5deg)!important}
+
+/* ambient gold light in every section so the glass has something to frost */
+html.sva-dark main section:not(#hero-section)>.block-background{background:
+ radial-gradient(700px 380px at 12% 18%,rgba(212,166,74,.11),transparent 70%),
+ radial-gradient(640px 360px at 88% 82%,rgba(241,213,143,.07),transparent 70%),#0b0b0d!important}
+html.sva-dark main section:nth-of-type(even):not(#hero-section)>.block-background{background:
+ radial-gradient(760px 400px at 85% 15%,rgba(212,166,74,.12),transparent 70%),
+ radial-gradient(600px 340px at 10% 90%,rgba(241,213,143,.06),transparent 70%),#111114!important}
+html.sva-dark #ready-to-work-smarter>.block-background{background:
+ radial-gradient(900px 420px at 50% 100%,rgba(212,166,74,.24),transparent 70%),#0e0d0b!important}
+
+/* stronger glass: visible fill, top highlight, inner sheen */
+html.sva-dark .grid-card{
+ background:linear-gradient(155deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.05) 45%,rgba(212,166,74,.06) 100%)!important;
+ border:1px solid rgba(255,255,255,.14)!important;border-top-color:rgba(255,255,255,.26)!important;
+ -webkit-backdrop-filter:blur(22px) saturate(160%)!important;backdrop-filter:blur(22px) saturate(160%)!important}
+html.sva-dark .grid-card[style*="#ad7900"],html.sva-dark .grid-card[style*="173, 121, 0"]{border-color:rgba(212,166,74,.5)!important;border-top-color:rgba(241,213,143,.7)!important}
+
+/* body copy a touch brighter for contrast */
+html.sva-dark main .text-box :is(p,li,span,a,strong,em),html.sva-dark main .text-box :is(p,li) *{color:#cfc8b8!important}
+html.sva-dark main .text-box [style*="173, 121, 0"],html.sva-dark main .text-box [style*="#ad7900"],
+html.sva-dark main .text-box [style*="#563c00"],html.sva-dark main .text-box [style*="#AD7900"]{color:#e0b85e!important}
+
+/* footer form labels/inputs marked --light */
+html.sva-dark :is(.input__label--light,.input__component--light){color:#cfc8b8!important}
+html.sva-dark .input__component--light{background:rgba(255,255,255,.06)!important;border-color:rgba(255,255,255,.2)!important;color:#f3efe6!important}
