@@ -163,3 +163,10 @@ main :is(h1,h2,h3,h4){text-wrap:balance}
 main :is(p,li){text-wrap:pretty}
 .grid-button{letter-spacing:.06em!important;word-spacing:normal!important;line-height:1.2!important;display:inline-flex!important;align-items:center;justify-content:center;text-align:center;text-wrap:balance}
 @media(max-width:767px){.grid-button{letter-spacing:.04em!important;padding-left:24px!important;padding-right:24px!important}}
+
+/* v4.1: page-wide cursor light above sections (blended so text stays crisp) */
+#sva-spot{position:fixed;inset:0;z-index:9996;pointer-events:none;opacity:0;transition:opacity .6s ease;mix-blend-mode:soft-light;background:radial-gradient(480px circle at var(--sva-gx,50%) var(--sva-gy,40%),rgba(var(--sva-gold-lt),.55),transparent 60%)}
+html.sva-pointer #sva-spot{opacity:1}
+main :is(ul,ol){list-style-position:inside;padding-left:0}
+.grid-button{min-width:fit-content;padding-left:max(28px,var(--grid-button-primary-padding-x,28px))!important;padding-right:max(28px,var(--grid-button-primary-padding-x,28px))!important}
+@media(max-width:767px){.grid-button{padding-left:24px!important;padding-right:24px!important;min-width:0;max-width:100%}}
