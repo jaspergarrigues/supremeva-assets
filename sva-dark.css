@@ -1,6 +1,6 @@
 /* Supreme VA dark + gold + glass theme (Hark). Active when <html> has .sva-dark */
 html.sva-dark{
- --sd-bg:#0b0b0d;--sd-bg2:#121215;--sd-ink:#f3efe6;--sd-mute:#b9b2a3;
+ --sd-bg:#17161a;--sd-bg2:#121215;--sd-ink:#f3efe6;--sd-mute:#b9b2a3;
  --sd-gold:#d4a64a;--sd-gold2:#f1d58f;--sd-gold-deep:#ad7900;
  --sd-glass:rgba(255,255,255,.055);--sd-glass-hi:rgba(255,255,255,.09);
  --sd-line:rgba(212,166,74,.28);--sd-line-soft:rgba(255,255,255,.10);
@@ -113,12 +113,12 @@ html.sva-dark .block-background__image{opacity:.10!important;filter:invert(1) se
 /* ambient gold light in every section so the glass has something to frost */
 html.sva-dark main section:not(#hero-section)>.block-background{background:
  radial-gradient(700px 380px at 12% 18%,rgba(212,166,74,.11),transparent 70%),
- radial-gradient(640px 360px at 88% 82%,rgba(241,213,143,.07),transparent 70%),#0b0b0d!important}
+ radial-gradient(640px 360px at 88% 82%,rgba(241,213,143,.07),transparent 70%),transparent!important}
 html.sva-dark main section:nth-of-type(even):not(#hero-section)>.block-background{background:
  radial-gradient(760px 400px at 85% 15%,rgba(212,166,74,.12),transparent 70%),
- radial-gradient(600px 340px at 10% 90%,rgba(241,213,143,.06),transparent 70%),#111114!important}
+ radial-gradient(600px 340px at 10% 90%,rgba(241,213,143,.06),transparent 70%),transparent!important}
 html.sva-dark #ready-to-work-smarter>.block-background{background:
- radial-gradient(900px 420px at 50% 100%,rgba(212,166,74,.24),transparent 70%),#0e0d0b!important}
+ radial-gradient(900px 420px at 50% 100%,rgba(212,166,74,.24),transparent 70%),rgba(27,25,21,.6)!important}
 
 /* stronger glass: visible fill, top highlight, inner sheen */
 html.sva-dark .grid-card{
@@ -147,3 +147,12 @@ html.sva-dark .social-icons__link svg{color:#d4a64a!important;opacity:1!importan
 html.sva-dark .social-icons__link svg [fill]:not([fill=none]){fill:#d4a64a!important}
 html.sva-dark .social-icons__link svg [stroke]:not([stroke=none]){stroke:#d4a64a!important}
 html.sva-dark .sva-sub-hero::before{background-image:radial-gradient(rgba(212,166,74,.10) 1px,transparent 1.2px)}
+
+/* dark v4: softer charcoal, sections let the ambient layer show through */
+html.sva-dark main section,html.sva-dark main section .block-background{background:transparent!important}
+html.sva-dark #real-estate-va-services>.block-background,html.sva-dark #support-plans .block-background{background:transparent!important}
+html.sva-dark .block-background__overlay{background-color:var(--sd-bg)!important}
+html.sva-dark #sva-ambient .b1{opacity:.22;background:radial-gradient(circle,rgba(212,166,74,.55),rgba(212,166,74,0) 70%)}
+html.sva-dark #sva-ambient .b2{opacity:.18;background:radial-gradient(circle at 40% 40%,rgba(241,213,143,.35),rgba(241,213,143,0) 60%),radial-gradient(circle at 70% 75%,rgba(173,121,0,.35),rgba(173,121,0,0) 45%)}
+html.sva-dark #sva-ambient .dots{background-image:radial-gradient(rgba(241,213,143,.09) 1px,transparent 1.2px)}
+html.sva-dark #sva-ambient .spot{background:radial-gradient(460px circle at var(--sva-gx,50%) var(--sva-gy,40%),rgba(212,166,74,.16),transparent 60%)}
