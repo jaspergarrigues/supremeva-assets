@@ -2,6 +2,15 @@
 //# sourceMappingURL=lenis.min.js.map
 
 /* Supreme VA site scripts (Hark) */
+/* dark theme gate: ?theme=dark turns on (remembered), ?theme=light turns off */
+(function(){try{var q=new URLSearchParams(location.search).get('theme'),k='sva-theme';
+if(q==='dark'||q==='light')localStorage.setItem(k,q);
+var on=(localStorage.getItem(k)||window.SVA_DEFAULT_THEME||'light')==='dark';if(!on)return;
+var cs=document.currentScript,base=cs&&cs.src?cs.src.replace(/sva\.js(\?.*)?$/,''):'https://cdn.jsdelivr.net/gh/jaspergarrigues/supremeva-assets@main/';
+if(!document.getElementById('sva-dark-css')){var l=document.createElement('link');l.rel='stylesheet';l.id='sva-dark-css';l.href=base+'sva-dark.css';document.head.appendChild(l)}
+document.documentElement.classList.add('sva-dark');
+new MutationObserver(function(){if(!document.documentElement.classList.contains('sva-dark'))document.documentElement.classList.add('sva-dark')}).observe(document.documentElement,{attributes:true,attributeFilter:['class']});
+}catch(e){}})();
 (function(){if(document.getElementById('sva-ld'))return;var s=document.createElement('script');s.type='application/ld+json';s.id='sva-ld';s.text="{\"@context\":\"https://schema.org\",\"@type\":\"ProfessionalService\",\"name\":\"Supreme VA\",\"url\":\"https://supremeva.com\",\"description\":\"Trained, Philippines-based virtual assistants for U.S. real estate agents, teams and brokers.\",\"email\":\"Connect@SupremeVA.com\",\"telephone\":\"+1-917-310-2015\",\"areaServed\":{\"@type\":\"Country\",\"name\":\"United States\"},\"serviceType\":\"Real estate virtual assistant services\"}";document.head.appendChild(s)})();
 /* motion layer v1 */
 (function(){
