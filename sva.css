@@ -127,3 +127,15 @@ html.sva-scrolled .top-blocks--sticky .block-header .background{opacity:0}
 
 @media (max-width:920px){#hero-section>.block-background::before,#hero-section>.block-background::after{filter:blur(45px)}#hero-section::after{display:none}}
 @media (prefers-reduced-motion:reduce){#hero-section>.block-background::before,#hero-section>.block-background::after,.sva-gold-text,.grid-button--primary::before,#sva-grain{animation:none!important}}
+
+/* subpage parity v3: Contact, Blog, Careers get the Home hero treatment */
+.sva-sub-hero{position:relative;isolation:isolate;overflow:hidden}
+.sva-sub-hero>.block-background{overflow:hidden}
+.sva-sub-hero>.block-background::before,.sva-sub-hero>.block-background::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform;z-index:0}
+.sva-sub-hero>.block-background::before{width:40vw;height:40vw;left:-8vw;top:-6vw;opacity:.5;background:radial-gradient(circle,rgba(var(--sva-gold-lt),.8),rgba(var(--sva-gold-lt),0) 70%);animation:svaDrift1 22s ease-in-out infinite alternate}
+.sva-sub-hero>.block-background::after{width:44vw;height:34vw;right:-10vw;top:-8vw;opacity:.6;background:radial-gradient(circle at 35% 40%,rgba(var(--sva-cream),1),rgba(var(--sva-cream),0) 60%),radial-gradient(circle at 70% 75%,rgba(var(--sva-gold),.25),rgba(var(--sva-gold),0) 45%);animation:svaDrift2 26s ease-in-out infinite alternate}
+.sva-sub-hero::before{content:"";position:absolute;inset:0;z-index:14;pointer-events:none;background-image:radial-gradient(rgba(var(--sva-brown),.12) 1px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 55% at 50% 40%,#000 0%,transparent 75%)}
+.sva-sub-hero>.block-layout{position:relative;z-index:15}
+.sva-gold-text strong,.sva-gold-text span{color:inherit!important;-webkit-text-fill-color:inherit}
+@media (max-width:920px){.sva-sub-hero>.block-background::before,.sva-sub-hero>.block-background::after{filter:blur(45px)}}
+@media (prefers-reduced-motion:reduce){.sva-sub-hero>.block-background::before,.sva-sub-hero>.block-background::after{animation:none!important}}
