@@ -1,0 +1,98 @@
+/* Supreme VA dark + gold + glass theme (Hark). Active when <html> has .sva-dark */
+html.sva-dark{
+ --sd-bg:#0b0b0d;--sd-bg2:#121215;--sd-ink:#f3efe6;--sd-mute:#b9b2a3;
+ --sd-gold:#d4a64a;--sd-gold2:#f1d58f;--sd-gold-deep:#ad7900;
+ --sd-glass:rgba(255,255,255,.055);--sd-glass-hi:rgba(255,255,255,.09);
+ --sd-line:rgba(212,166,74,.28);--sd-line-soft:rgba(255,255,255,.10);
+ color-scheme:dark;background:var(--sd-bg)}
+html.sva-dark body{background:var(--sd-bg)!important;color:var(--sd-ink)}
+
+/* section backgrounds: alternate two near-blacks, warm gold haze on key bands */
+html.sva-dark main section,html.sva-dark main section .block-background{background:var(--sd-bg)!important}
+html.sva-dark #real-estate-va-services .block-background,
+html.sva-dark #support-plans .block-background,
+html.sva-dark #how-it-works .block-background{background:
+ radial-gradient(1100px 500px at 50% 0%,rgba(212,166,74,.10),transparent 70%),var(--sd-bg2)!important}
+html.sva-dark #ready-to-work-smarter .block-background{background:
+ radial-gradient(900px 420px at 50% 100%,rgba(212,166,74,.18),transparent 70%),var(--sd-bg)!important}
+html.sva-dark .block-background__overlay{background-color:#000!important}
+html.sva-dark #hero-section .block-background{background:
+ radial-gradient(900px 520px at 15% 20%,rgba(212,166,74,.20),transparent 65%),
+ radial-gradient(800px 480px at 90% 70%,rgba(241,213,143,.10),transparent 65%),var(--sd-bg)!important}
+html.sva-dark #hero-section::before{background-image:radial-gradient(rgba(241,213,143,.14) 1px,transparent 1.2px)}
+html.sva-dark #hero-section>.block-background::before{opacity:.35;background:radial-gradient(circle,rgba(212,166,74,.55),rgba(212,166,74,0) 70%)}
+html.sva-dark #hero-section>.block-background::after{opacity:.4;background:radial-gradient(circle at 35% 40%,rgba(241,213,143,.35),rgba(241,213,143,0) 60%),radial-gradient(circle at 70% 75%,rgba(173,121,0,.4),rgba(173,121,0,0) 45%)}
+html.sva-dark #hero-section::after{background:radial-gradient(420px circle at var(--sva-mx,50%) var(--sva-my,40%),rgba(212,166,74,.18),transparent 60%)}
+
+/* text */
+html.sva-dark main .text-box :is(h1,h2,h3,h4,h5,h6),
+html.sva-dark main .text-box :is(h1,h2,h3,h4,h5,h6) *{color:var(--sd-ink)!important}
+html.sva-dark main .text-box :is(p,li,span,a,strong,em),
+html.sva-dark main .text-box :is(p,li) *{color:var(--sd-mute)!important}
+html.sva-dark main .text-box [style*="173, 121, 0"],html.sva-dark main .text-box [style*="#ad7900"],
+html.sva-dark main .text-box [style*="#563c00"],html.sva-dark main .text-box [style*="#AD7900"]{color:var(--sd-gold)!important}
+html.sva-dark main .text-box a:hover{color:var(--sd-gold2)!important}
+html.sva-dark .sva-gold-text{background-image:linear-gradient(100deg,#ad7900 0%,#d4a64a 35%,#fbe7b0 50%,#d4a64a 65%,#ad7900 100%)!important;background-size:250% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:transparent!important}
+
+/* glass cards */
+html.sva-dark .grid-card{
+ --card-bg:var(--sd-glass)!important;--card-border:1px solid var(--sd-line-soft)!important;
+ --card-box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 20px 50px -20px rgba(0,0,0,.7)!important;
+ background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02))!important;
+ border:1px solid var(--sd-line-soft)!important;
+ -webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);
+ box-shadow:0 1px 0 rgba(255,255,255,.07) inset,0 24px 60px -24px rgba(0,0,0,.8)!important;
+ transition:border-color .35s ease,box-shadow .35s ease,transform .35s ease}
+html.sva-dark .grid-card[style*="#ad7900"],html.sva-dark .grid-card[style*="173, 121, 0"]{
+ border-color:var(--sd-line)!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.07) inset,0 0 0 1px rgba(212,166,74,.12),0 24px 70px -24px rgba(212,166,74,.25)!important}
+html.sva-dark .grid-card:hover{border-color:rgba(212,166,74,.45)!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 28px 70px -24px rgba(212,166,74,.28)!important}
+
+/* shapes (dividers, icon tiles) go gold */
+html.sva-dark .grid-shape{--shape-color:var(--sd-gold)!important}
+html.sva-dark .grid-shape[style*="#563c00"]{--shape-color:rgba(212,166,74,.16)!important}
+html.sva-dark .grid-shape svg *{fill:currentColor}
+
+/* glass buttons, gold-led */
+html.sva-dark .grid-button,html.sva-dark .form__button,html.sva-dark .block-header__button a,html.sva-dark .block-header__button .grid-button{
+ --background-color:rgba(212,166,74,.14)!important;--background-color-hover:rgba(212,166,74,.26)!important;
+ --font-color:var(--sd-gold2)!important;--font-color-hover:#fff!important;
+ --border-color:rgba(212,166,74,.55)!important;--border-color-hover:var(--sd-gold2)!important;
+ background:linear-gradient(180deg,rgba(241,213,143,.20),rgba(212,166,74,.08))!important;
+ color:var(--sd-gold2)!important;border:1px solid rgba(212,166,74,.55)!important;
+ -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+ box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 10px 30px -12px rgba(212,166,74,.45)!important}
+html.sva-dark .grid-button *,html.sva-dark .form__button *{color:inherit!important}
+html.sva-dark .grid-button:hover,html.sva-dark .form__button:hover{color:#fff!important;border-color:var(--sd-gold2)!important;
+ background:linear-gradient(180deg,rgba(241,213,143,.32),rgba(212,166,74,.16))!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 14px 38px -12px rgba(212,166,74,.6)!important}
+/* first hero CTA stays solid gold for a clear primary action */
+html.sva-dark #hero-section .grid-button--primary:first-of-type,
+html.sva-dark #ready-to-work-smarter .grid-button--primary{
+ background:linear-gradient(180deg,#f1d58f,#c9973a)!important;color:#141006!important;border-color:transparent!important}
+html.sva-dark #hero-section .grid-button--primary:first-of-type *,html.sva-dark #ready-to-work-smarter .grid-button--primary *{color:#141006!important}
+
+/* header: dark frosted glass */
+html.sva-dark .block-header{--background-color:rgba(11,11,13,.62)!important;--nav-link-text-color:var(--sd-ink)!important;--nav-link-text-color-hover:var(--sd-gold2)!important;--icon-color:var(--sd-gold)!important;
+ background:rgba(11,11,13,.62)!important;border-bottom:1px solid var(--sd-line-soft);
+ -webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%)}
+html.sva-dark .block-header-item__label,html.sva-dark .block-header-item__item,html.sva-dark .block-header a{color:var(--sd-ink)!important}
+html.sva-dark .block-header-item__item:hover,html.sva-dark .block-header-item__label:hover{color:var(--sd-gold2)!important}
+html.sva-dark .block-header-logo__image{filter:invert(1) hue-rotate(180deg) brightness(1.05)}
+html.sva-dark .block-header-layout-mobile__dropdown{background:rgba(11,11,13,.92)!important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+html.sva-dark .block-header__hamburger-menu *{color:var(--sd-ink)!important;fill:var(--sd-ink)!important;stroke:var(--sd-ink)!important}
+
+html.sva-dark.sva-scrolled .top-blocks--sticky .block-header{background-color:rgba(11,11,13,.72)!important;box-shadow:0 1px 0 rgba(212,166,74,.18)}
+
+/* forms */
+html.sva-dark .form{--form-border-color:rgba(255,255,255,.18)!important}
+html.sva-dark .form__control :is(input,textarea,select){background:rgba(255,255,255,.05)!important;color:var(--sd-ink)!important;border-color:rgba(255,255,255,.18)!important}
+html.sva-dark .form__control :is(input,textarea):focus{border-color:var(--sd-gold)!important;box-shadow:0 0 0 3px rgba(212,166,74,.18)!important}
+html.sva-dark .form :is(label,p,span){color:var(--sd-mute)!important}
+
+/* social icons, misc */
+html.sva-dark .layout-element__component--GridSocialIcons{--icon-color:var(--sd-gold)!important}
+html.sva-dark ::selection{background:rgba(212,166,74,.35);color:#fff}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ html.sva-dark .grid-card{background:rgba(28,28,32,.92)!important}}
