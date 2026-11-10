@@ -139,3 +139,27 @@ html.sva-scrolled .top-blocks--sticky .block-header .background{opacity:0}
 .sva-gold-text strong,.sva-gold-text span{color:inherit!important;-webkit-text-fill-color:inherit}
 @media (max-width:920px){.sva-sub-hero>.block-background::before,.sva-sub-hero>.block-background::after{filter:blur(45px)}}
 @media (prefers-reduced-motion:reduce){.sva-sub-hero>.block-background::before,.sva-sub-hero>.block-background::after{animation:none!important}}
+
+/* v4: site-wide ambient (hero background + cursor glow on every section) */
+#sva-ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+#sva-ambient i{position:absolute;display:block}
+#sva-ambient .b1,#sva-ambient .b2{border-radius:50%;filter:blur(80px);will-change:transform}
+#sva-ambient .b1{width:46vw;height:46vw;left:-10vw;top:-6vw;opacity:.5;background:radial-gradient(circle,rgba(var(--sva-gold-lt),.8),rgba(var(--sva-gold-lt),0) 70%);animation:svaDrift1 24s ease-in-out infinite alternate}
+#sva-ambient .b2{width:52vw;height:42vw;right:-12vw;bottom:-10vw;opacity:.55;background:radial-gradient(circle at 40% 40%,rgba(var(--sva-cream),1),rgba(var(--sva-cream),0) 60%),radial-gradient(circle at 70% 75%,rgba(var(--sva-gold),.3),rgba(var(--sva-gold),0) 45%);animation:svaDrift2 28s ease-in-out infinite alternate}
+#sva-ambient .dots{inset:0;background-image:radial-gradient(rgba(var(--sva-brown),.10) 1px,transparent 1.2px);background-size:26px 26px}
+#sva-ambient .spot{inset:0;opacity:0;transition:opacity .6s ease;background:radial-gradient(460px circle at var(--sva-gx,50%) var(--sva-gy,40%),rgba(var(--sva-gold-lt),.28),transparent 60%)}
+html.sva-pointer #sva-ambient .spot{opacity:1}
+main.page,.page{position:relative;z-index:1}
+/* hero/subpage local dots + cursor glow are replaced by the site-wide layer */
+#hero-section::before,#hero-section::after,.sva-sub-hero::before{display:none!important}
+@media (max-width:920px){#sva-ambient .b1,#sva-ambient .b2{filter:blur(50px)}}
+@media (prefers-reduced-motion:reduce){#sva-ambient .b1,#sva-ambient .b2{animation:none!important}}
+/* v4: even type rhythm, desktop and phone */
+main :is(h1,h2,h3,h4,h5,h6,p,li,a,span,strong){word-spacing:normal!important}
+main :is(p,li,p span,li span){letter-spacing:normal!important}
+main :is(h1,h2,h3,h1 *,h2 *,h3 *){letter-spacing:-0.01em!important}
+main [style*="text-align: justify"],main [style*="text-align:justify"]{text-align:left!important}
+main :is(h1,h2,h3,h4){text-wrap:balance}
+main :is(p,li){text-wrap:pretty}
+.grid-button{letter-spacing:.06em!important;word-spacing:normal!important;line-height:1.2!important;display:inline-flex!important;align-items:center;justify-content:center;text-align:center;text-wrap:balance}
+@media(max-width:767px){.grid-button{letter-spacing:.04em!important;padding-left:24px!important;padding-right:24px!important}}
