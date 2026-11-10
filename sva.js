@@ -39,6 +39,13 @@ new MutationObserver(function(){if(!document.documentElement.classList.contains(
     if(b.top<window.innerHeight*0.9){return}
     el.classList.add('sva-reveal');io.observe(el)});
 
+   /* failsafe: reveal builder-animated elements ourselves so nothing stays invisible
+      if the builder's own animation trigger is slow or never fires */
+   var anim=[].slice.call(document.querySelectorAll('section.block .layout-element.transition:not(.transition--none)'));
+   anim.forEach(function(el){
+    if(el.closest('#hero-section')){setTimeout(function(){el.classList.add('sva-in')},120);return}
+    io.observe(el)});
+   setTimeout(function(){var vb=window.innerHeight;anim.concat(plain).forEach(function(el){if(el.getBoundingClientRect().top<vb)el.classList.add('sva-in')})},2500);
    /* images: zoom-out as they scroll through */
    var imgs=[].slice.call(document.querySelectorAll('section.block .layout-element__component--GridImage'));
    imgs.forEach(function(w){w.classList.add('sva-zoom')});
