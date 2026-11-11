@@ -170,3 +170,26 @@ html.sva-pointer #sva-spot{opacity:1}
 main :is(ul,ol){list-style-position:inside;padding-left:0}
 .grid-button{min-width:fit-content;padding-left:max(28px,var(--grid-button-primary-padding-x,28px))!important;padding-right:max(28px,var(--grid-button-primary-padding-x,28px))!important}
 @media(max-width:767px){.grid-button{padding-left:24px!important;padding-right:24px!important;min-width:0;max-width:100%}}
+
+/* v4.2: button labels never clip; cards and lists line up */
+.layout-element:has(>.layout-element__component--GridButton){display:flex!important;justify-content:center;align-items:stretch;overflow:visible!important}
+a.layout-element__component--GridButton{width:max-content!important;min-width:100%!important;max-width:none!important;flex:0 0 auto;white-space:nowrap!important;letter-spacing:.5px!important;padding-left:24px!important;padding-right:24px!important;text-wrap:nowrap}
+@media(max-width:919px){a.layout-element__component--GridButton{max-width:calc(100vw - 32px)!important;font-size:13px!important;padding-left:18px!important;padding-right:18px!important}}
+@media(min-width:920px){
+ /* hero pair: centred as a pair with a 16px gap */
+ #\36 9vzae{position:relative;left:-49px}
+ #K-6g9T{position:relative;left:25px}
+ /* closing CTA button centred under its heading */
+ #zfpYEc{position:relative;left:126px}
+ /* with / without: gold rule and rows level with the left card */
+ #ufwfxP{position:relative;top:-58px}
+ #1hW6c6{position:relative;top:3px}
+ #\38 ie-Cv{position:relative;top:6px}
+ /* services, second row: both cards start on the same line */
+ #svTgEm,#\37 zcU4m,#JDdHyF,#ke_XPG{position:relative;top:-24px}
+}
+/* one body font for every paragraph, and a capital first letter on list items */
+.text-box p:not([class]){font-family:var(--font-secondary),'Montserrat',sans-serif!important}
+#l99RDc p,#\31 hW6c6 p,#\38 ie-Cv p{font-size:16px!important;line-height:1.5!important}
+@media(max-width:919px){#l99RDc p,#\31 hW6c6 p,#\38 ie-Cv p{font-size:14px!important}}
+#l99RDc p::first-letter,#\31 hW6c6 p::first-letter,#\38 ie-Cv p::first-letter,#Uj3Umm p::first-letter,#\30 ELne8 p::first-letter,#yhbA3W p::first-letter,#euDuDM p::first-letter,#b1ARL9 p::first-letter{text-transform:uppercase}
