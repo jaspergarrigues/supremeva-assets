@@ -172,16 +172,7 @@ main :is(ul,ol){list-style-position:inside;padding-left:0}
 @media(max-width:767px){.grid-button{padding-left:24px!important;padding-right:24px!important;min-width:0;max-width:100%}}
 
 /* v4.3: button labels never clip (explicit widths per button); cards and lists line up */
-#\36 9vzae,#XFTZ9_,#Nz-8hK,#ZgFrUK{width:274px!important}
-#K-6g9T{width:284px!important}
-#dNsehO{width:384px!important}
-#\36 9vzae,#XFTZ9_,#Nz-8hK,#ZgFrUK,#K-6g9T,#dNsehO,#zfpYEc{min-width:0!important;max-width:none!important;justify-self:center!important;align-self:center!important;letter-spacing:.5px!important;padding-left:20px!important;padding-right:20px!important;white-space:nowrap!important;overflow:visible!important;text-overflow:clip!important}
-.layout-element:has(>#\36 9vzae),.layout-element:has(>#K-6g9T),.layout-element:has(>#XFTZ9_),.layout-element:has(>#Nz-8hK),.layout-element:has(>#ZgFrUK),.layout-element:has(>#dNsehO),.layout-element:has(>#zfpYEc){overflow:visible!important}
-@media(max-width:919px){#\36 9vzae,#XFTZ9_,#Nz-8hK,#ZgFrUK,#K-6g9T,#dNsehO{width:min(290px,calc(100vw - 32px))!important;font-size:13px!important;padding-left:12px!important;padding-right:12px!important;translate:none!important}}
 @media(min-width:920px){
- #\36 9vzae{translate:-49px 0}
- #K-6g9T{translate:25px 0}
- #zfpYEc{translate:126px 0}
  #ufwfxP{position:relative;top:-58px}
  #\31 hW6c6{position:relative;top:3px}
  #\38 ie-Cv{position:relative;top:6px}
